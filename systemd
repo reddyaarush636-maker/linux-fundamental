@@ -19,6 +19,9 @@ System logs
  systemctl list-units --type=target     =  target file
  systemctl --failed    =  fail servises
  systemctl list-unit-files --type=service
+systemctl list-dependencies nginx.service = show dependencies
+systemctl list-dependencies --reverse nginx.service = reverse dependencies
+systemctl list-dependencies multi-user.target =  Check Why a Service Starts
  
  unit
  --------------
