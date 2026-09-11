@@ -83,4 +83,72 @@ uniq → REMOVE DUPLICATES
 grep -i "error" application.log
 awk '{print $1}' access.log
 
+file type | inode | hard_link |  soft_link
+----------------------------------------------------
+
+
+user  | group |  permission | umask 
+--------------------------------------------------------
+
+
+
+
+sudo_internal | security implitation 
+----------------------------------------------
+
+
+
+
+process_lifecycle (fork,exec,signals)
+--------------------------
+
+
+
+systemd:
+>unit ,  target , dependencies 
+------------------------------------
+
+
+>app log | system_log
+----------------------------------
+
+
+
+disk:
+>mount point | fstab   | awarence
+------------------------------------------
+
+>disk pressure & inode exhaustion
+----------------------------------
+
+
+
+Memory & cpu
+>free , vmstart basic 
+-------------------------
+
+>cpu_load | cpu_usage 
+--------------------------
+
+
+
+SSH:
+>kay_based quth
+
+
+>port_forward use cases
+
+
+
+
+common failures
+---------------------
+>service not starting 
+
+>permission denied
+
+>disk full
+
+>high load 
+
 
