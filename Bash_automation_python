@@ -1,0 +1,36 @@
+Shell execution model
+----------------------------
+
+
+exit code  & error handling 
+----------------------------------
+
+
+variables, quoting , conditional
+-----------------------------------
+
+
+loop  & funtions
+----------------------
+
+positional and parameter
+----------------------------
+
+
+pipeline & redirection 
+--------------------------
+
+
+crone & scheduling pitfalls
+---------------------------------
+
+
+idempolent scripting mindset
+------------------------------
+
+logging in script 
+------------------
+
+
+
+defensive scripting (ROBUST)
