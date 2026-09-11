@@ -85,17 +85,47 @@ awk '{print $1}' access.log
 
 file type | inode | hard_link |  soft_link
 ----------------------------------------------------
+ls -l = show the file all details
+ls -l test.txt   | ls -ld /home
+
+# WHAT IS INODE 
+An inode is a data structure that stores information about a file or directory.
+ls -i = see inode
+ls -i test.txt
+mv test.txt new.txt
+ls -i new.txt
+
+Hard Link and inode
+echo "Hello" > file1 | ls -i file1 | ln file1 file2  = create hard link | ls -li file1 file2
+
+What is an inode exhaustion problem
+df -i = check inode uses
+df -h   = check space  
+df -hT  = check file system 
+ls -i  = show inode no
+ls -li = del inode info
 
 
 user  | group |  permission | umask 
 --------------------------------------------------------
+useradd u1 | paaswd u1 | userdel u1
+groupadd g1 | groupdel g1
+cat etc/passwd = see user & group 
+tail -1 /etc/passwd = see low level one user 
+head -1 /etc/passwd = see top user | head -1 /etc/group 
+usermod -aG g1 u1 = add group on user
+#permission 
+chmod 755 f1.txt = user permission
+chown u1 f1.txt  = owner permission
+chgrp g1 f1.txt  = group permission 
 
+#umask = a rule that controls the default permission of NEW files and folders
 
 
 
 sudo_internal | security implitation 
 ----------------------------------------------
-
+sudo = to provide temporaly root permission | manager aaproval
 
 
 
