@@ -1,0 +1,70 @@
+OSI & TCP/IP (PRACTICAL MAPPING)
+-----------------------------------------
+
+
+
+IP ADDRESS &  CIDR
+--------------------------
+
+
+
+PORT AND SOCKET 
+----------------------
+
+
+TCP HANDSACK & COMMON FAILER
+--------------------------------
+
+
+
+DNS
+>RESOLUTION FLOW
+
+
+>CACHING & TTL
+
+
+
+
+HTTP
+>REQUST LIFECYCLE
+
+
+
+>HEADLER , STATUS CODE
+
+
+
+HTTPS
+>CERTIFICATE
+
+
+
+>HEALTH CHECK 
+
+
+
+DEBUGGING TOOLS
+-------------------------
+>CURL (ADVANCE USES)
+
+
+
+>DIG | NSLOOKUP
+
+
+
+>SS | NETSTART
+
+
+
+>TRACEROUTE
+
+
+
+>TCPDUMP(BASIC)
+
+
+
+
+
