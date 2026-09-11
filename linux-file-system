@@ -131,6 +131,16 @@ sudo = to provide temporaly root permission | manager aaproval
 
 process_lifecycle (fork,exec,signals)
 --------------------------
+A simple process lifecycle is: create>fork>exec>running>signal>exit
+1. What is a process? = A program is a file stored on disk
+2. fork() — Create a new process
+3. Practical example  =
+4. exec() — Replace the process program
+5. Easy real-life example
+6. fork() + exec() together
+7. What are signals?
+
+A signal is a message sent to a process.
 
 
 
