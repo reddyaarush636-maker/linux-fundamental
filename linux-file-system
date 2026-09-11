@@ -1,0 +1,86 @@
+>Filesystem
+-----------------------------
+/ = Root — starting point of everything || /home = Normal users' personal files || /root = Home directory of the root/admin user
+/etc = Configuration files || /var = Logs and changing/application data || /tmp = Temporary files || /bin = Essential commands/programs
+/usr = Installed programs and libraries || /opt = Optional/third-party software || /boot =  boot file || /Dev = Devices such as disks, USB,
+/mnt =  Temporary mount location || /media =  Usually automatically mounted USB/CD devices
+
+> permissions
+--------------------
+chmod = permission
+chown = owner 
+chgrp = group
+>processes
+----------------
+ps -a = show processes || ps -aux =  show all processes || top = live processes monitoring || htop = Better Process Viewer
+pgrep nginx = find specific services PID || pidof nginx = nginx PID || 
+?how to kill processes id 
+ps aux | grep nginx || kill -9 1234 = normal nginx kill || pstree = Show Process Tree || ps -fp $(pgrep nginx) ||  /proc = process info
+ls /proc/1234 || cat /proc/1234/status
+
+SSH
+-------------
+ssh username@IP_address=ssh ubuntu@192.168.1.10 || ssh -p 2222 ubuntu@192.168.1.10 - using deff port || ssh -i mykey.pem ubuntu@10.0.0.10
+ssh -i aws-key.pem ubuntu@54.123.45.67= chmod 400 aws-key.pem 
+4. Copy file to another Linux server — scp
+scp file.txt ubuntu@192.168.1.10:/home/ubuntu/
+scp -i aws-key.pem file.txt ubuntu@54.123.45.67:/home/ubuntu/
+scp ubuntu@192.168.1.10:/home/ubuntu/file.txt .
+sudo systemctl status ssh
+
+systemd = servise manager  in linux 
+---------------
+systemctl status nginx || sudo systemctl start nginx || sudo systemctl stop nginx || sudo systemctl restart nginx
+sudo systemctl enable nginx  || sudo systemctl disable nginx
+
+job = See background jobs || fg→ Bring to foreground  || bg→ Run in background || nice→ Set priority || renice→ Change priority
+
+logs
+-------------
+sudo journalctl || sudo journalctl -n 50 = check latest log || sudo journalctl -f =  live log || sudo journalctl -b = check current boot
+sudo journalctl -p err = check the error || sudo journalctl -p crit = check critical error 
+sudo journalctl -u nginx || sudo journalctl -u nginx -f || sudo journalctl -u docker || sudo journalctl -u ssh
+ls -lh /var/log/
+/var/log/syslog
+/var/log/auth.log
+/var/log/kern.log
+/var/log/dmesg
+sudo tail -f /var/log/syslog = system log || sudo tail -f /var/log/auth.log = ssh authentication log 
+sudo dmesg = kernel log ||  
+ls -lh /var/log/nginx/ = application log 
+sudo tail -f /var/log/nginx/error.log 
+sudo tail -f /var/log/nginx/access.log 
+sudo grep -i "error" /var/log/syslog = search an error
+sudo grep -Ri "error" /var/log/
+sudo tail /var/log/syslog - last few  log 
+sudo tail -n 100 /var/log/syslog = 100 logs
+sudo journalctl -n 50 
+
+ip addr  = check ip || ping google.com = check connectivity || ss -tulnp = Check ports || 
+curl http://server:8080 = Test HTTP/API connectivity || wget https://example.com = Download/test URL 
+traceroute google.com = Find network path || dig google.com 
+nslookup google.com = DNS lookup || route -n View routing table || ip route
+netstart -tulpn   | ss -tulpn | grep 80: = check the 
+Bash scripting
+Networking basics: TCP/IP, DNS, HTTP, ports
+ftp-21 >ssh 22 >telnet 23 >SMTP 25 >DNS 53 >HTTP 80 >HTTPS 448 > DHCP 67/68 >IMAP 167 >POP3 110
+
+sed 's/old/new/' file1.txt
+sed -i 's/hello/Hi/' file.txt = refresh  permanently
+sed 's/hello/Hi/g' file.txt = Replace all occurrences in a line
+sed '2d' file.txt =  delete line two
+sed '2,4d' file.txt = delete line 2 4
+sed -n '3p' file.txt  = print line 3
+sed -n '2,5p' file.txt  = print line 2 5
+ awk '{print $1}' aaa.txt = show first colume
+awk '{print $1, $3}' users.txt = print 1st and 2nd colume
+grep → FIND
+sed  → CHANGE
+awk  → EXTRACT/PROCESS
+cut  → SELECT COLUMNS
+sort → SORT
+uniq → REMOVE DUPLICATES
+grep -i "error" application.log
+awk '{print $1}' access.log
+
+
