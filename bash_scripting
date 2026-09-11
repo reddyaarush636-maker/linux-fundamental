@@ -1,0 +1,49 @@
+check_servers
+--------------------------
+vim check_servers
+#!/bin/bash
+
+echo "CPU:"
+uptime
+
+echo "Memory:"
+free -h
+
+echo "Disk:"
+df -h
+
+echo "Running processes:"
+ps aux | head
+
+chmod 755 check_servers
+./check_servers
+
+Checking disk space
+-----------------------------
+nano disk.sh
+#!/bin/bash
+
+usage=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+
+if [ "$usage" -gt 80 ]; then
+    echo "WARNING: Disk usage is ${usage}%"
+else
+    echo "Disk usage is ${usage}% - OK"
+fi
+ctrl+o > ctrl+x
+chmod 755 disk.sh
+./disk.sh
+
+checking_application_error
+----------------------------------
+nano check_app_error
+#!/bin/bash
+
+echo "Checking application errors..."
+
+grep -i "error" /var/log/myapp.log
+
+echo "Done"
+ctrl+o > ctrl+x
+chmod 755 check_app_error
+./check_app_error
