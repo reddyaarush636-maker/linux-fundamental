@@ -1,6 +1,10 @@
 🟢 Phase 0 — IT Fundamentals {Time: 1–2 weeks}
 Computer hardware basics | CPU, RAM, HDD/SSD |  BIOS/UEFI  | Windows basics | Client vs Server | Virtualization |  VMware/VirtualBox
-IP address | MAC address | DNS | DHCP |  Gateway
+IP address = uniq no of devises to connect of internet
+A - 0>127 10.0.0.0 10.255.255.255 /8
+B - 128>191 172.16.0.0 172.31.255.255  /16
+C - 192>223 192.168.0.0  192.168.255.255 /24
+| MAC address | DNS | DHCP |  Gateway
 Ports
 TCP/UDP
 HTTP/HTTPS
