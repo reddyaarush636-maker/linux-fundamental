@@ -1,0 +1,260 @@
+🟢 Phase 0 — IT Fundamentals {Time: 1–2 weeks}
+Computer hardware basics | CPU, RAM, HDD/SSD |  BIOS/UEFI  | Windows basics | Client vs Server | Virtualization |  VMware/VirtualBox
+IP address | MAC address | DNS | DHCP |  Gateway
+Ports
+TCP/UDP
+HTTP/HTTPS
+
+Practical
+
+Create:
+
+1 Windows VM
+1 Ubuntu VM
+Practice IP configuration
+Ping between machines
+SSH from Windows → Ubuntu
+
+🟢 Phase 1 — Linux ⭐⭐⭐⭐⭐ {3 WEEKS}
+1. Linux filesystem
+/
+├── /etc
+├── /var
+├── /home
+├── /tmp
+├── /opt
+├── /usr
+├── /bin
+├── /sbin
+├── /root
+└── /dev
+2.COMMAND
+------------
+pwd
+ls
+cd
+mkdir
+touch
+cp
+mv
+rm
+cat
+less
+head
+tail
+find
+grep
+sort
+uniq
+wc
+cut
+tr
+sed
+awk
+
+3.PERMISSION
+chmod        READ-4  WRITE-2 EXICUTE-1 777
+chown        ---   ---      ---
+chgrp       USER   GROUP   OTHER
+umask
+
+4. Processes
+ps
+top
+htop
+kill
+pkill
+nice
+renice
+jobs
+bg
+fg
+nohup
+
+5. Services
+systemctl
+journalctl
+service
+
+6. Networking
+ip
+ss
+ping
+curl
+wget
+dig
+nslookup
+traceroute
+
+7. LOGS
+/var/log
+journalctl
+tail -f
+grep
+
+8.SSH
+ssh
+scp
+rsync
+
+Practical project
+
+Build an Ubuntu server and:
+
+Create users
+Configure SSH
+Configure permissions
+Install Nginx
+Start/stop Nginx
+Check logs
+Configure firewall
+Troubleshoot failed services
+
+Goal: You should be comfortable working on an Ubuntu server without GUI.
+
+
+🟢 Phase 2 — Networking ⭐⭐⭐⭐ {2-3 WEEKS}
+OSI Model
+TCP/IP
+IPv4
+Subnetting
+CIDR
+Private/Public IP
+NAT
+DNS
+DHCP
+ARP
+TCP
+UDP
+HTTP
+HTTPS
+SSH
+FTP/SFTP
+SMTP
+
+PORT
+SSH-22 > DNS-53  >  HTTP-80 > HTTPS-443  > FTP-21 > SMTP-25 
+MySQL-3306 > PostgreSQL-5432 
+
+🟢 Phase 3 — Git & GitHub ⭐⭐⭐⭐⭐ {1-2 WEEK}
+git init
+git clone
+git status
+git add
+git commit
+git push
+git pull
+git fetch
+git branch
+git switch
+git merge
+git log
+git diff
+git stash
+git reset
+git revert
+
+UNDERSTAND
+Working Directory
+       ↓
+Staging Area
+       ↓
+Local Repository
+       ↓
+GitHub
+
+🟢 Phase 4 — Bash + Python ⭐⭐⭐⭐ {2-3 weeks}
+variables
+if
+else
+for
+while
+functions
+arguments
+exit codes
+
+python
+--------------
+variables
+lists
+dictionaries
+if/else
+loops
+functions
+files
+exceptions
+modules
+requests
+JSON
+
+DevOps Python tasks
+-----------------------------
+Check server health
+Check disk usage
+Check memory
+Read logs
+Call REST API
+Parse JSON
+Create automation scripts
+
+🟢 Phase 5 — AWS ⭐⭐⭐⭐⭐
+IAM = IDENTIFIED ACCESS MANAGEMENT
+User
+Group
+Role
+Policy
+Access Key
+MFA
+
+EC2 =  AWS VIRTUAL MACHINE
+AMI
+Instance
+Instance Type
+Key Pair
+Security Group
+EBS
+Elastic IP
+Public IP
+Private IP
+
+VPC = VIRTUAL PRIVATE CLOUD
+VPC
+Subnet
+Route Table
+Internet Gateway
+NAT Gateway
+Security Group
+NACL
+
+S3
+----
+Bucket
+Object
+Versioning
+Lifecycle
+Bucket Policy
+IAM Policy
+
+OTHER IMPORTANT SERVISES
+-----------------------------
+CloudWatch
+RDS
+ALB
+Auto Scaling
+Route 53
+ECR
+ECS basics
+Lambda basics
+
+🟢 Phase 6 — Docker ⭐⭐⭐⭐⭐ {2-3 WEEKS}
+Image
+Container
+Dockerfile
+Registry
+Volume
+Network
+Port Mapping
+Environment Variables
+
+
+
