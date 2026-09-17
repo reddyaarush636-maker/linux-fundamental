@@ -255,6 +255,130 @@ Volume
 Network
 Port Mapping
 Environment Variables
+COMMAND
+------------
+docker pull
+docker images
+docker build
+docker run
+docker ps
+docker ps -a
+docker stop
+docker start
+docker restart
+docker rm
+docker rmi
+docker logs
+docker exec
+docker inspect
+docker network
+docker volume
+
+DOCKERFILE 
+-----------------
+FROM
+WORKDIR
+COPY
+RUN
+EXPOSE
+ENV
+CMD
+ENTRYPOINT
+
+DOCKERR COMPOSE
+---------------------
+services:
+volumes:
+networks:
+ports:
+environment:
+
+SIMPLE DOCKER PROJECT
+------------------------
+GIT-HUB > DOCKERFILE > DOCKER IMAGE > DOCKER-HUB > DOCKER -CONTAINER
+
+🟢 Phase 7 — CI/CD + Jenkins ⭐⭐⭐⭐⭐  [3 WEEKS]
+LEARN COMPLETE CONSEPT
+Developer
+    ↓
+GitHub
+    ↓
+CI Pipeline
+    ↓
+Build
+    ↓
+Test
+    ↓
+Security Scan
+    ↓
+Docker Build
+    ↓
+Docker Push
+    ↓
+Deployment
+
+JENKINS
+-------------
+Jenkins Controller
+Agent
+Job
+Pipeline
+Node
+Credential
+Webhook
+Plugin
+Artifact
+
+JENKINS PIPELINE [groovy file]
+pipeline {
+    stages {
+        stage('Build') {}
+        stage('Test') {}
+        stage('Docker Build') {}
+        stage('Push') {}
+        stage('Deploy') {}
+    }
+}
+
+*under stand both [jenkins + github-action]
+
+🟢 Phase 8 — Kubernetes ⭐⭐⭐⭐⭐[4weeks]
+FIRST UNDERSTAND 
+-----------------------
+Cluster
+Node
+Control Plane
+Worker Node
+Pod
+Container
+Deployment
+ReplicaSet
+Service
+Namespace
+ConfigMap
+Secret
+Ingress
+Volume
+
+COMMAND
+---------------
+kubectl get pods
+kubectl get nodes
+kubectl get svc
+kubectl get deployment
+kubectl describe pod
+kubectl logs
+kubectl exec
+kubectl apply
+kubectl delete
+kubectl scale
+
+
+
+
+
+
+
 
 
 
