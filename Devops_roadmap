@@ -373,6 +373,157 @@ kubectl apply
 kubectl delete
 kubectl scale
 
+LEARN
+--------------
+apiVersion:
+kind:
+metadata:
+spec:
+
+START WITH
+POD  > deployment > servises > ingress
+
+Then
+-----
+configmap > secret > PersistentVolume > PersistentVolumeClaim
+HPA > RBAC
+
+Deploy
+----------------
+Frontent > backend > Database
+
+🟢 Phase 9 — Terraform ⭐⭐⭐⭐⭐[2-3]
+Provider
+Resource
+Variable
+Output
+Module
+State
+Backend
+Plan
+Apply
+Destroy
+
+COMMAND
+-------------
+terraform init
+terraform validate
+terraform fmt
+terraform plan
+terraform apply
+terraform destroy
+terraform show
+terraform state
+
+PROJECT
+---------
+VPC
+ -SUBNET
+ -ROUTING TABLE
+ -SECURITY GROUP
+ -EC2
+
+🟢 Phase 10 — Ansible ⭐⭐⭐ [1-2 WEEKS]
+Inventory
+Playbook
+Task
+Module
+Variable
+Handler
+Role
+Idempotency
+
+Automate:
+-----------------
+Package installation
+User creation
+Nginx installation
+Configuration
+Application deployment
+
+Phase 11 — Monitoring ⭐⭐⭐⭐ [1-2] WEEKS
+Prometheus 9090
+-------------
+Metrics
+Exporter
+Target
+Scraping
+PromQL
+Alert
+
+Grafana    3000
+--------------
+Dashboard
+Panel
+Query
+Datasource
+Alert
+
+🟢 Phase 12 — DevSecOps ⭐⭐⭐⭐
+TOOL
+----------
+Trivy
+SonarQube
+OWASP Dependency Check
+SAST
+DAST basics
+Secret scanning
+Container scanning
+
+PIPELINE
+------------
+GIT > BUILD > SONARQUBE > DEPENDENCIES SCAN > DOCKER BUILD >TRIVY 
+DOCKER REGISTRY > KUBERNETS
+
+🟢 Phase 13 — Advanced Topics
+K8S
+----
+HELM > INGRESS > HPA > RBAC > NETWORKPOLICY > STATEFULSET >  Daemonset 
+Persistent storage
+
+CI/CD
+------
+GitOps
+Argo CD
+Blue/green deployment
+Canary deployment 
+rolling deployment
+
+Project: Production-style 3-Tier DevOps Deployment
+-----------------------------------------------------------------
+                 GitHub
+                    |
+                    ↓
+             GitHub Actions
+                    |
+       ┌────────────┴────────────┐
+       ↓                         ↓
+   SonarQube                   Trivy
+       |                         |
+       └────────────┬────────────┘
+                    ↓
+              Docker Build
+                    ↓
+                   ECR
+                    ↓
+               Kubernetes
+                    |
+          ┌─────────┴─────────┐
+          ↓                   ↓
+      Frontend              Backend
+                              |
+                              ↓
+                             RDS
+
+              Prometheus
+                    ↓
+                 Grafana
+
+
+
+
+
+
 
 
 
