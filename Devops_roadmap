@@ -22,29 +22,29 @@ SSH from Windows → Ubuntu
 🟢 Phase 1 — Linux ⭐⭐⭐⭐⭐ {3 WEEKS}
 1. Linux filesystem
 /
-├── /etc
-├── /var
+├── /etc = configuration file
+├── /var = log file
 ├── /home
-├── /tmp
+├── /tmp  = temporary file
 ├── /opt
 ├── /usr
 ├── /bin
 ├── /sbin
-├── /root
-└── /dev
+├── /root = root file
+└── /dev  = device file
 2.COMMAND
 ------------
-pwd
-ls
-cd
-mkdir
-touch
-cp
-mv
-rm
-cat
+pwd = present work dir
+ls  = list file  
+cd  = change dir
+mkdir = create dir
+touch =  create file 
+cp   = copy 
+mv    = move file
+rm    = remove file
+cat    = 
 less
-head
+head   =
 tail
 find
 grep
