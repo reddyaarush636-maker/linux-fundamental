@@ -150,7 +150,30 @@ systemd:
 
 
 >app log | system_log
-----------------------------------
+---------------------------------- 
+journalctl  | journalctl -n 50 = show latest log  | journalctl -f = show log continuously | journalctl -p err = check errorr
+journalctl -b -p err = check error current boot | journalctl -u ssh   = show specific servise logs
+LIVE LOGS
+journalctl -u ssh | journalctl -u ssh -f | journalctl -u docker | journalctl -u nginx
+sudo tail -f /var/log/kern.log =  karnel log 
+ls -lh /var/log/ =  application log
+/var/log/nginx/access.log
+/var/log/nginx/error.log
+sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/access.log
+
+DOCKER APPLICATION LOG
+---------------------------------------------
+docker logs <cont-name>
+docker logs -f <cont-name>       = live logs
+docker logs --tail 100 <cont-name> = 100 logs 
+
+k8s logs 
+---------------------------------------------------
+kubectl get po
+kubectl logs -f <pod-name>         = k8s log
+kubectl logs <pod-name> -c <container-name> = If the pod has multiple containers
+kubectl logs <pod-name> --previous  = Previous crashed container
 
 
 
