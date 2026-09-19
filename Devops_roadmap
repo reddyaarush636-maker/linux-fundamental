@@ -46,19 +46,22 @@ touch =  create file
 cp   = copy 
 mv    = move file
 rm    = remove file
-cat    = 
-less
-head   =
-tail
-find
-grep
-sort
-uniq
-wc
-cut
-tr
-sed
-awk
+cat   = see the file content
+less  = less is used to view a large file page by page without opening an editor
+head   = see top level user details 
+tail   =  see low level  detail 
+find   = find the file 
+grep   =  find a particular word or pattern
+grep -r "error" /var/log/
+grep -c "error" app.log
+sort = put data in order , alphabetically A-Z
+uniq = remove duplicate
+wc   = word count
+wc -l file.txt | wc -w file.txt | wc -m file.txt | wc -c file.txt | wc -c file.txt
+cut = 
+tr  =
+sed  =
+awk  =
 
 3.PERMISSION
 chmod        READ-4  WRITE-2 EXICUTE-1 777
@@ -67,17 +70,19 @@ chgrp       USER   GROUP   OTHER
 umask
 
 4. Processes
-ps
-top
-htop
-kill
-pkill
-nice
+-----------------------
+ps  = ps -aux |  ps -aux | grep nginx   | ps -ef --forest  = show tree format | ps aux --sort=-%cpu>mem>
+top = live view of CPU, memory, and running processes
+htop = interactive/live view of CPU, memory, and processes
+kill  = kill specific prosesses
+pkill =  kill a process using its name   sudo pkill nginx
+nice  = nice = tell Linux how much CPU priority a process should get
+nice -n 10 ./backup.sh  | sudo renice -5 -p 1234
 renice
-jobs
-bg
-fg
-nohup
+jobs   = The jobs command is used to see background and stopped processes started from your current terminal
+bg     = bg means background. It is used to continue a stopped job in the background
+fg     = fg means foreground. It is used to bring a background or stopped job back to the foreground
+nohup  = nohup means “no hang up.” It is used to keep a command running even after you close the terminal or log out from SSH
 
 5. Services
 systemctl
