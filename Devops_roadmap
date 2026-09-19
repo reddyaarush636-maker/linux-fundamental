@@ -4,9 +4,13 @@ IP address = uniq no of devises to connect of internet
 A - 0>127 10.0.0.0 10.255.255.255 /8
 B - 128>191 172.16.0.0 172.31.255.255  /16
 C - 192>223 192.168.0.0  192.168.255.255 /24
-| MAC address | DNS | DHCP |  Gateway
-Ports
-TCP/UDP
+| MAC address = Phisical address of any devise 
+DNS  = domain name system , FQDN-IP 
+     = top lavel domain > authority 
+DHCP   = 
+Gateway =  control incomming|outgoing traffic
+Ports   = setup rule 
+TCP/UDP = 
 HTTP/HTTPS
 
 Practical
@@ -16,7 +20,7 @@ Create:
 1 Windows VM
 1 Ubuntu VM
 Practice IP configuration
-Ping between machines
+Ping between machines = Packet Internet Groper
 SSH from Windows → Ubuntu
 
 🟢 Phase 1 — Linux ⭐⭐⭐⭐⭐ {3 WEEKS}
