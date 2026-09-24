@@ -167,6 +167,9 @@ DOCKER APPLICATION LOG
 docker logs <cont-name>
 docker logs -f <cont-name>       = live logs
 docker logs --tail 100 <cont-name> = 100 logs 
+docker system df = check how many container consume storage 
+docker system df -v = show more container details
+sudo du -sh /var/lib/docker
 
 k8s logs 
 ---------------------------------------------------
