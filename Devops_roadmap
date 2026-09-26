@@ -356,7 +356,7 @@ pipeline {
 *under stand both [jenkins + github-action]
 
 🟢 Phase 8 — Kubernetes ⭐⭐⭐⭐⭐[4weeks]
-FIRST UNDERSTAND 
+FIRST UNDERSTAND        API = application programming interface
 -----------------------
 Cluster
 Node
