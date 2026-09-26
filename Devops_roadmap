@@ -387,13 +387,49 @@ How to update the application
 
 -deployment also work rolling update
 
-ReplicaSet
-Service
-Namespace
-ConfigMap
-Secret
-Ingress
-Volume
+ReplicaSet = A ReplicaSet (RS) is a Kubernetes object that makes sure a specific number of identical Pods are always running
+           = it is not update rollout 
+Service  = A Service in Kubernetes provides a stable way to access Pods.
+         Pod = your application
+         Service = the fixed address used to reach the application
+Why do we need a Service?
+Pods are temporary. A Pod can be deleted and recreated, and its IP address can change.
+
+Namespace = A Namespace is like a separate room/folder inside a Kubernetes cluster used to organize and separate resources
+simple example 
+Kubernetes Cluster
+│
+├── Development Namespace
+│   ├── Pods
+│   ├── Services
+│   └── Deployments
+│
+├── Testing Namespace
+│   ├── Pods
+│   ├── ServicesVery 
+│   └── Deployments
+│
+└── Production Namespace
+    ├── Pods
+    ├── Services
+    └── Deployments
+ConfigMap =  A ConfigMap is used to store configuration data 
+from your application/container.
+Very simple example
+APP_NAME = Netflix
+APP_PORT = 8080
+ENVIRONMENT = production
+
+Secret = A Secret in Kubernetes is used to store sensitive information that your application needs.
+ConfigMap = Normal information
+Secret    = Sensitive information
+
+Ingress = Ingress is a Kubernetes object that controls how outside users access applications inside the cluster, usually using HTTP/HTTPS.
+Ingress = traffic entry point + routing rules
+
+Volume  = A Volume in Kubernetes is a way to provide storage to a Pod/container
+Container = temporary workspace
+Volume = storage that can keep data available
 
 COMMAND
 ---------------
