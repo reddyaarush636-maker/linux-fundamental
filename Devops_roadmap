@@ -358,13 +358,35 @@ pipeline {
 🟢 Phase 8 — Kubernetes ⭐⭐⭐⭐⭐[4weeks]
 FIRST UNDERSTAND        API = application programming interface
 -----------------------
-Cluster
-Node
-Control Plane
-Worker Node
-Pod
-Container
-Deployment
+Cluster = A Kubernetes cluster is a group of computers (machines) working together to run applications
+Node    = one machine inside that cluster
+Control Plane = The Control Plane is the brain of a Kubernetes cluster. 🧠
+Worker Node   = A worker node normally has three important things:
+           Worker Node
+│
+├── Kubelet = Communicates with the Control Plane and makes sure the required Pods are running.
+├── Container Runtime = Actually runs the containers. A common runtime is containerd.
+└── Pods  = Your applications run inside Pods.
+Pod   = group of container
+
+Container 📦
+│
+├── Application
+├── Libraries
+├── Dependencies
+└── Configuration
+Deployment = 
+A Deployment is a Kubernetes object that manages Pods for you.
+It tells Kubernetes things like:
+----------------------------------
+Which container image to use
+How many Pods you want
+Which version of the application to run
+What to do when a Pod crashes
+How to update the application
+
+-deployment also work rolling update
+
 ReplicaSet
 Service
 Namespace
