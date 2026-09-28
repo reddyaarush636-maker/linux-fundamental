@@ -58,7 +58,16 @@ sort = put data in order , alphabetically A-Z
 uniq = remove duplicate
 wc   = word count
 wc -l file.txt | wc -w file.txt | wc -m file.txt | wc -c file.txt | wc -c file.txt
-cut = 
+
+cut = The cut command in Ubuntu/Linux is used to extract specific columns, characters, or fields from text.
+Common options:
+---------------------------
+-c → select characters
+-d → specify delimiter
+-f → select fields/columns
+echo "Aarush Reddy" > user.txt |cut -c 1-6 user.txt  | cut -c 1 user.txt
+echo "Aarush:DevOps:Pune:27" > user.txt | cut -d ':' -f 1 user.txt | cut -d ':' -f 2 user.txt
+
 tr  =
 sed  =
 awk  =
