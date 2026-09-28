@@ -159,14 +159,16 @@ SSH-22 > DNS-53  >  HTTP-80 > HTTPS-443  > FTP-21 > SMTP-25
 MySQL-3306 > PostgreSQL-5432 
 
 🟢 Phase 3 — Git & GitHub ⭐⭐⭐⭐⭐ {1-2 WEEK}
-git init
-git clone
-git status
-git add
-git commit
-git push
-git pull
-git fetch
+git init = git init means: “Start Git tracking in this folder." 
+git clone = git clone means: “Download a Git repository from a remote server to your local computer.”
+git status = git status shows the current condition of your Git repository.
+git add    =  git add means: “Prepare my changes for the next commit.”
+git commit = it commit means: “Save my staged changes into Git history
+git push  = git push sends your local commits to the remote repository, such as GitHub.
+git push > Computer → GitHub > Upload your commits
+git pull  = git pull downloads changes from the remote repository and integrates them into your current local branch.
+git pull > GitHub → Computer > Get remote changes
+git fetch = 
 git branch
 git switch
 git merge
