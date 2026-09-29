@@ -168,10 +168,22 @@ git push  = git push sends your local commits to the remote repository, such as 
 git push > Computer → GitHub > Upload your commits
 git pull  = git pull downloads changes from the remote repository and integrates them into your current local branch.
 git pull > GitHub → Computer > Get remote changes
-git fetch = 
-git branch
+git pull origin main = work two type [fetch>merge]
+
+vs  code   = use vs code in git 
+---------------------
+choose file > create file > terminal 
+git init 
+git add .
+git commit -m "vs-code"
+git branch -M main
+git remote add origin https://github.com/reddyaarush636-maker/29-test.git
+git push -u origin main
+git fetch = show changes
+git status = see the commit
+git merge origin/main = download the changes file
+git branch  = show the branch
 git switch
-git merge
 git log
 git diff
 git stash
