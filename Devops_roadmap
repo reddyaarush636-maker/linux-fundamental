@@ -201,6 +201,7 @@ git  diff --stages     = show the diffence on git staging area
 git commit -m "secont"
 git push -u origin main 
 git diff origin/main  = show changes file
+git push            = push the code in remote repository
 git stash
 git reset
 git revert
