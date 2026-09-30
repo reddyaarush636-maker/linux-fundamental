@@ -185,7 +185,22 @@ git merge origin/main = download the changes file
 git branch  = show the branch
 git switch
 git log
-git diff
+
+git diff  
+----------------
+chage some file 
+<body>
+    <h2>git pull & git fetch</h2>
+     <h3>diff-demo</h3>  = this change 
+</body>
+</html>
+ctrl+s = save in vs code 
+git diff  = show the diff chages 
+git add .  = chages file  add  in git stagin area
+git  diff --stages     = show the diffence on git staging area 
+git commit -m "secont"
+git push -u origin main 
+git diff origin/main  = show changes file
 git stash
 git reset
 git revert
