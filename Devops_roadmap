@@ -69,6 +69,7 @@ echo "Aarush Reddy" > user.txt |cut -c 1-6 user.txt  | cut -c 1 user.txt
 echo "Aarush:DevOps:Pune:27" > user.txt | cut -d ':' -f 1 user.txt | cut -d ':' -f 2 user.txt
 
 tr  = tr means translate. It is used to replace, change, or delete characters.
+---------------------------------------------------------------------------------
 echo "devops" | tr 'a-z' 'A-Z' = Change lowercase → uppercase
 OUTPUT = DEVOPS
 echo "hello-world" | tr '-' ' '   = Replace a character
