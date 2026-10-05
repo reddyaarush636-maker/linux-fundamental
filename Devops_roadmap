@@ -113,14 +113,36 @@ journalctl
 service
 
 6. Networking
-ip
-ss
-ping
-curl
-wget
-dig
-nslookup
-traceroute
+ip  = check the ip address
+ip addr      ip a 
+ip route   = check the routing table
+ss  = ss is used to see network connections and listening ports
+ss -tuln
+ping = Is the machine reachable
+curl = It is commonly used to send requests to websites and APIs
+curl https://google.com = Test a website
+
+curl -I https://google.com = Check only HTTP headers
+HTTP/2 200   = 200 meanse request success full
+content-type: text/html
+curl http://192.168.1.20 = test apache server 
+
+wget = wget is mainly used to download files from the Internet.
+wget https://example.com/file.zip
+dig = dig is used to troubleshoot DNS.
+dig google.com
+nslookup  = nslookup is also used to check DNS.
+nslookup google.com  
+traceroute  =  traceroute shows the route/hops your packets take to reach another destination
+
+ip          → My network information
+ss          → My ports/connections
+ping        → Can I reach it?
+curl        → Can I get a web/API response?
+wget        → Can I download it?
+dig         → What does DNS say?
+nslookup    → Resolve domain to IP
+traceroute  → What path does traffic take?
 
 7. LOGS
 /var/log
@@ -150,8 +172,16 @@ Goal: You should be comfortable working on an Ubuntu server without GUI.
 
 
 🟢 Phase 2 — Networking ⭐⭐⭐⭐ {2-3 WEEKS}
-OSI Model = 
-TCP/IP
+OSI Model = OSI is a 7-layer model that helps us understand how network communication works.
+7. Application   → HTTP, HTTPS, DNS, SSH
+6. Presentation  → Encryption / formatting
+5. Session       → Session management
+4. Transport     → TCP / UDP
+3. Network       → IP / Routing
+2. Data Link     → MAC / ARP
+1. Physical      → Cable / Wi-Fi
+
+TCP/IP  = TCP/IP is the model actually used by the Internet.
 IPv4
 Subnetting
 CIDR
