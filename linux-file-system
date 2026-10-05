@@ -77,9 +77,43 @@ awk '{print $1, $3}' users.txt = print 1st and 2nd colume
 grep → FIND
 sed  → CHANGE
 awk  → EXTRACT/PROCESS
-cut  → SELECT COLUMNS
-sort → SORT
-uniq → REMOVE DUPLICATES
+
+cut  → SELECT COLUMNS | = cut command is used to extract specific parts of text from a line.
+vim abc.sh
+Rahul:DevOps:25000
+Amit:Linux:30000
+Ravi:AWS:35000    esc+shift+:wq
+cut -d ":" -f 1 employees.txt
+cut -d ":" -f 2 employees.txt
+cut -d ":" -f 3 employees.txt
+cut -d ":" -f 1,3 employees.txt     = show the muiltiple colume
+cut -d ":" -f 1 /etc/passwd
+cut -d ":" -f 7 /etc/passwd
+
+
+sort → SORT =  Used to arrange lines in alphabetical or numerical order.
+vim sort.sh
+Ravi
+Amit
+Rahul   esc+shift:+wq
+sort sort.sh
+sort -r file.txt     # Reverse order
+sort -n numbers.txt  # Numerical order
+sort -u file.txt     # Sort + remove duplicates
+
+uniq → REMOVE DUPLICATES = uniq is used to find/remove duplicate lines from text.
+vim uniq.txt
+Amit
+Amit
+Rahul
+Rahul
+Ravi   esc+shift:+wq
+uniq uniq.text  =  show dublicates
+sort names.txt | uniq
+sort names.txt | uniq -c
+sort names.txt | uniq -d
+cat access.log | cut -d " " -f 1 | sort | uniq -c
+
 grep -i "error" application.log
 awk '{print $1}' access.log
 
