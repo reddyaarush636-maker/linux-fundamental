@@ -182,21 +182,45 @@ OSI Model = OSI is a 7-layer model that helps us understand how network communic
 1. Physical      → Cable / Wi-Fi
 
 TCP/IP  = TCP/IP is the model actually used by the Internet.
-IPv4
-Subnetting
-CIDR
-Private/Public IP
-NAT
+Application → HTTP
+Transport   → TCP
+Internet    → IP
+Network     → Ethernet/Wi-Fi
+IPv4   = 32 bit   IPv4 is an IP addressing system.
+Subnetting = Subnetting means dividing one large network into smaller networks.
+CIDR  =   CIDR means Classless Inter-Domain Routing.
+Private   = Used inside your local network.
+public   =  use to internet
+NAT      = NAT converts private IP addresses to a public IP when accessing the Internet.
 DNS
 DHCP
-ARP
-TCP
-UDP
-HTTP
-HTTPS
+ARP   = ARP = IP → MAC
+   
+TCP = Transmission Control Protocol.
+
+TCP is:
+
+Connection-oriented
+Reliable
+Ordered
+Error checked
+
+
+UDP = User Datagram Protocol.
+
+UDP is:
+
+Connectionless
+Faster
+No guarantee of delivery
+No 3-way handshake
+
+HTTP = Used for communication between a web browser and web server.
+HTTPS =  HTTP + encryption using TLS.
 SSH
-FTP/SFTP
-SMTP
+SFTP  = SSH File Transfer Protocol. , It transfers files securely through SSH.
+
+SMTP  = Used for sending email.
 
 PORT
 SSH-22 > DNS-53  >  HTTP-80 > HTTPS-443  > FTP-21 > SMTP-25 
