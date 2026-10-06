@@ -153,3 +153,34 @@ Second: DevOps
 Total arguments: 2
 
 8. Exit Codes
+----------------------------
+Every Linux command returns an exit code
+0     = SUCCESS
+non-0 = ERROR/FAILURE
+?how to check exit code 
+Terminal
+#useradd u1   = command succesfully execute 
+#echo $?     = 0 show the command exicute successfully
+#useradd u1  = show one error
+#echo $?     = show one no 1>255 that is error code
+
+
+vim filecheck.sh
+#!/bin/bash
+
+#Check if a file exists
+printf "type file name:-"
+read file
+if [ -f "$file" ] ; then 
+    echo "file  $file exists,"
+    exit 0 # Success
+else
+    echo "File $file does not exist."
+    exit 1 #Failure
+fi
+
+esc+shift:wq
+#bash filecheck.sh
+type file name:-newfile  = output [file newfile does not exist.]
+              :-file.sh  = if file is available then output [file file.sh exsts.]
+
