@@ -1,1 +1,155 @@
+1. Variables     = A variable stores information
+----------------
+vim variable.sh
 
+name="Aarush"
+age=27
+
+echo "My name is $name"
+echo "My age is $age"    esc + shift:wq
+chmod variable.sh
+./variable
+
+APP_NAME="myapp"
+APP_PORT=8080
+
+echo "Application: $APP_NAME"
+echo "Port: $APP_PORT"
+
+./variable
+
+2.IF   =  Check a condition
+------------
+vim if.sh
+age=20
+
+if [ $age -ge 18 ]
+then
+    echo "You are eligible"
+fi
+
+./if.sh
+
+Common operators         Operator	Meaning
+     -eq	                    equal
+     -ne	                    not equal
+     -gt	                    greater than
+     -lt	                    less than
+     -ge	                    greater/equal
+     -le	                    less/equal
+
+num=10
+if [ $num -gt 5 ]
+then
+    echo "Number is greater than 5"
+fi
+
+3. else     = If the if condition is FALSE, do this
+----------------------------------
+age=16
+
+if [ $age -ge 18 ]
+then
+    echo "Adult"
+else
+    echo "Minor"
+fi
+
+./else.sh
+
+4. for loop   = for is used when you want to repeat something for a known list/range
+------------------------
+for i in 1 2 3 4 5
+do
+    echo "Number: $i"
+done
+./loop.sh
+
+for i in {1..5}
+do
+    echo "Number: $i"
+done
+
+./loop.sh
+
+5. while loop  = Keep doing something while a condition is TRUE
+--------------------------------------
+count=1
+
+while [ $count -le 5 ]
+do
+    echo "Count = $count"
+    count=$((count + 1))
+done
+./loop.sh
+
+6. Functions   =  A function is a reusable block of commands
+--------------    Instead of writing the same commands again and again, put them inside a function
+vim function.sh
+hello()
+{
+    echo "Hello Aarush"
+}
+
+hello
+hello
+hello
+chmod 755 function.sh
+./function.sh
+
+systemctl restart apache2
+vim apche2.sh
+restart_apache()
+{
+    sudo systemctl restart apache2
+    echo "Apache restarted"
+}
+
+restart_apache
+
+./apache2.sh
+
+7. Arguments   =  Arguments allow you to give information to a script from the command line
+-----------------------------------------
+vim test.sh
+#!/bin/bash
+
+echo "Name: $1"           = $1 = Aarush
+echo "Age: $2"            = $2 = 27
+
+#bash test.sh Aarush 27
+
+output
+-----------
+Name: Aarush
+Age: 27
+
+Important arguments
+-----------------------------
+Variable                                  	Meaning
+  $0	                                    Script name
+  $1	                                    First argument
+  $2	                                    Second argument
+  $3	                                    Third argument
+  $#	                                    Number of arguments
+  $@	                                    All arguments
+
+example
+----------
+vim tesh.sh
+#!/bin/bash
+
+echo "Script: $0"
+echo "First: $1"
+echo "Second: $2"
+echo "Total arguments: $#"
+
+#bash test.sh Linux DevOps
+
+Output:
+Script: test.sh
+First: Linux
+Second: DevOps
+Total arguments: 2
+
+8. Exit Codes
