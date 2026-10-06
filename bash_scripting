@@ -17,6 +17,26 @@ echo "Application: $APP_NAME"
 echo "Port: $APP_PORT"
 
 ./variable
+------------------------------------------------------------
+vim var.py
+name = "Aarush"
+age = 27
+salary = 50000
+
+print(name)
+print(age)
+print(salary)
+
+DevOps example
+------------------------
+server_ip = "192.168.1.10"
+server_port = 22
+server_name = "web-server"
+
+print("Server:", server_name)
+print("IP:", server_ip)
+print("Port:", server_port)
+
 
 2.IF   =  Check a condition
 ------------
