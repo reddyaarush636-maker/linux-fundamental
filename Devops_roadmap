@@ -272,7 +272,40 @@ git diff origin/main  = show changes file
 git push            = push the code in remote repository
 git stash
 git reset
-git revert
+
+git revert  = git revert manage history 
+create new repo > 
+vs code > choose folder > index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>git revert command</h2>
+</body>
+</html>   
+ctrl+s
+git init
+git add .
+git commit -m "test"
+git branch -M main
+git remote add origin https://github.com/reddyaarush636-maker/29-test.git
+git push -u origin main
+<body>
+    <h2>git revert command</h2>
+     ------------------------ispe aak line add korna he 
+</body>
+ctrl+s
+git add .
+git push 
+git merge 4658934 [commit has code paste korna he -indo changes ko delete kardo]
+esc:q
+git push [mene jo bhi code me changes kiya tha bo del hojayaga
+
+
 
 UNDERSTAND
 Working Directory
