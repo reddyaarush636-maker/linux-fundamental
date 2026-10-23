@@ -138,6 +138,9 @@ df -h   = check space
 df -hT  = check file system 
 ls -i  = show inode no
 ls -li = del inode info
+df -h /   = check only main ubuntu storage 
+free -h  = show free ram storage 
+du -sh * = check file consume storage 
 
 
 user  | group |  permission | umask 
