@@ -28,12 +28,12 @@ SSH from Windows → Ubuntu
 /
 ├── /etc = configuration file
 ├── /var = log file
-├── /home
+├── /home = Normal users' personal files
 ├── /tmp  = temporary file
-├── /opt
-├── /usr
-├── /bin
-├── /sbin
+├── /opt  =  Optional/third-party software
+├── /usr  = Installed programs and libraries
+├── /bin  = Essential commands/programs
+├── /sbin = 
 ├── /root = root file
 └── /dev  = device file
 2.COMMAND
@@ -108,11 +108,45 @@ fg     = fg means foreground. It is used to bring a background or stopped job ba
 nohup  = nohup means “no hang up.” It is used to keep a command running even after you close the terminal or log out from SSH
 
 5. Services
-systemctl
+---------------------
+systemctl = servise manager  in linux 
+***************
+systemctl status nginx || sudo systemctl start nginx || sudo systemctl stop nginx || sudo systemctl restart nginx
+sudo systemctl enable nginx  || sudo systemctl disable nginx
+
+job = See background jobs || fg→ Bring to foreground  || bg→ Run in background || nice→ Set priority || renice→ Change priority
+
+
+journalctl = log manager 
+************
+logs
+-------------
+sudo journalctl || sudo journalctl -n 50 = check latest log || sudo journalctl -f =  live log || sudo journalctl -b = check current boot
+sudo journalctl -p err = check the error || sudo journalctl -p crit = check critical error 
+sudo journalctl -u nginx || sudo journalctl -u nginx -f || sudo journalctl -u docker || sudo journalctl -u ssh
+ls -lh /var/log/
+/var/log/syslog
+/var/log/auth.log
+/var/log/kern.log
+/var/log/dmesg
+sudo tail -f /var/log/syslog = system log || sudo tail -f /var/log/auth.log = ssh authentication log 
+sudo dmesg = kernel log ||  
+ls -lh /var/log/nginx/ = application log 
+sudo tail -f /var/log/nginx/error.log 
+sudo tail -f /var/log/nginx/access.log 
+sudo grep -i "error" /var/log/syslog = search an error
+sudo grep -Ri "error" /var/log/
+sudo tail /var/log/syslog - last few  log 
+sudo tail -n 100 /var/log/syslog = 100 logs
+sudo journalctl -n 50 
+/var/log
 journalctl
-service
+tail -f
+grep
+
 
 6. Networking
+*************************************
 ip  = check the ip address
 ip addr      ip a 
 ip route   = check the routing table
