@@ -349,6 +349,38 @@ Staging Area
 Local Repository
        ↓
 GitHub
+***********************************************************************************************
+Level 1 — Git basics
+Must know
+- What is Git? What is GitHub?
+- Git installation and configuration
+- git init, git clone
+- git status, git add, git commit
+- git log, git diff
+----------------------------------------------
+Level 2 — Branching and merging
+Must know
+- git branch, git switch
+- git checkout
+- git merge
+- Merge conflicts and conflict resolution
+- git stash
+------------------------------------------------
+Level 3 — GitHub collaboration
+- Create repositories
+- git remote, git push, git pull, git fetch
+- Pull requests (PRs)
+- Code reviews
+- Forks and cloning
+- .gitignore and README files
+---------------------------------------------------------------
+Level 4 — Advanced Git
+- git reset, git revert, git restore
+- git cherry-pick
+- git rebase
+- Tags and releases
+- Resolve non-fast-forward push errors
+- Protect branches and secure secrets
 
 🟢 Phase 4 — Bash + Python ⭐⭐⭐⭐ {2-3 weeks}
 variables
