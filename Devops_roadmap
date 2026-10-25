@@ -281,14 +281,19 @@ git commit -m "vs-code"
 git branch -M main
 git remote add origin https://github.com/reddyaarush636-maker/29-test.git
 git push -u origin main
-git fetch = show changes
+git fetch = show changes  || kush remote repo me changes koro
+            show the update 
+git fetch origin   = update but not download changes 
 git status = see the commit
 git merge origin/main = download the changes file
+git pull origin/main  = merger|pull same work
+                      = download and update in remote repo
 git branch  = show the branch
 git switch
 git log
 
-git diff  
+git diff  = chnages local me koro
+    diff command show the chages difference changes 
 ----------------
 chage some file 
 <body>
@@ -299,10 +304,14 @@ chage some file
 ctrl+s = save in vs code 
 git diff  = show the diff chages 
 git add .  = chages file  add  in git stagin area
-git  diff --stages     = show the diffence on git staging area 
+git  diff --staged    = show the diffence on git staging area 
 git commit -m "secont"
 git push -u origin main 
 git diff origin/main  = show changes file
+git diff   fac18a2            96528c
+         1st commit id    2nd commit idq
+git diff --name-only  = show which file under changes 
+git diff --color-words  = show color wide diff 
 git push            = push the code in remote repository
 git stash
 git reset
