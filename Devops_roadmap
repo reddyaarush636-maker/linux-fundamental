@@ -313,7 +313,18 @@ git diff   fac18a2            96528c
 git diff --name-only  = show which file under changes 
 git diff --color-words  = show color wide diff 
 git push            = push the code in remote repository
-git stash
+
+git stash   = git stash data safe in sppecial room 
+            any change code but donot commit stash command securely store data 
+            local machine 
+-------------
+create repo remote and local > code create > save 
+git init > git add . > git commit -m "' > git branch -M main 
+git remote add origin [remote repo url]
+git push -u origin main
+git stash  = store the info in room 
+git stash list  = show stash info 
+
 git reset
 
 git revert  = git revert manage history 
