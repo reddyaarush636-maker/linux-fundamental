@@ -5,6 +5,10 @@ servers = ["web1", "web2", "web3"]
 
 print(servers)
 
+:wq 
+chmod 755 list 
+python3 list.py
+
 OUTPUT = ['web1', 'web2', 'web3']
 
 3. Dictionaries   = A dictionary stores data as
@@ -20,6 +24,10 @@ server = {
 print(server["name"])
 print(server["ip"])
 print(server["status"])
+
+wq
+chmod 755 dic.py
+pyhon3 dic.py
 
 4. if / else   = if/else is used to make decisions
 -----------------------------------------------------------
