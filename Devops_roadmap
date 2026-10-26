@@ -521,6 +521,45 @@ docker inspect
 docker network
 docker volume
 
+---------------------------------------------
+HOW TO CONNECT UBUNTU DOCKER > DOCKER PROXY > DOCKER REGISTRY
+ISSUE = docker pull deamon error resolve
+
+#systemctl show docker --property Environment 
+#ping localhost  = check the local hub ip
+Step 1: Create the directory
+#sudo mkdir -p /etc/systemd/system/docker.service.d/
+Step 2: Create the proxy configuration file
+#sudo touch /etc/systemd/system/docker.service.d/http-proxy.conf
+#sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
+
+PROXY SCRIPT STEP1
+[Service]
+Environment="HTTP_PROXY=http://YOUR_PROXY_IP:YOUR_PROXY_PORT"
+Environment="HTTPS_PROXY=http://YOUR_PROXY_IP:YOUR_PROXY_PORT"
+Environment="NO_PROXY=localhost,127.0.0.1,192.168.36.0/24,172.17.0.0/16"
+
+PROXY SCRIPT STEP2
+
+[Service]
+Environment="HTTP_PROXY=http://user01:password@10.10.10.10:8080/"
+Environment="HTTPS_PROXY=http://user01:password@10.10.10.10:8080/"
+Environment="NO_PROXY=localhost,127.0.0.1,192.168.36.0/24,172.17.0.0/16"
+
+PROXY SCRIPT STEP3
+[Service]
+Environment="HTTP_PROXY=http://proxy.mycompany.com:3128"
+Environment="HTTPS_PROXY=http://proxy.mycompany.com:3128"
+Environment="NO_PROXY=localhost,127.0.0.1"
+
+#sudo systemctl daemon-reload
+#systemctl restart docker
+#systemctl restart docker.service 
+#systemctl info | grep -i proxy    = check the proxy setting 
+#systemctl show docker --property Environment
+
+
+
 DOCKERFILE 
 -----------------
 FROM
