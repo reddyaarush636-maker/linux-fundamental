@@ -178,6 +178,14 @@ dig         → What does DNS say?
 nslookup    → Resolve domain to IP
 traceroute  → What path does traffic take?
 
+**************************************************
+TIME ERROR SO DO NOT INSTALL ANY FFEATURE 
+timedatectl
+sudo timedatectl set-timezone Asia/Kolkata
+sudo timedatectl set-ntp true
+date
+timedatectl
+*********************************************************
 7. LOGS
 /var/log
 journalctl
