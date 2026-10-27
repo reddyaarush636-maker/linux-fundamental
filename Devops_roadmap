@@ -605,6 +605,15 @@ Deployment
 
 JENKINS
 -------------
+>JENKINS DEPLOYMENT FILE ON UBUNTU
+ sudo ls -lah /var/lib/jenkins/
+ sudo ls -lah /var/lib/jenkins/jobs/
+ sudo ls -lah /var/lib/jenkins/workspace/
+>COMMON JENKIN DEPLOY LOCATION 
+ ls -lah /var/www/html/
+ls -lah /opt/
+ls -lah /tmp/
+/usr/lib/systemd/system/jenkins.service  = jrnkin configuration file 
 Jenkins Controller
 Agent
 Job
