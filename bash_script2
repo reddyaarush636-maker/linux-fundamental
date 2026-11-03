@@ -1,0 +1,254 @@
+.Linux Server Health Monitoring
+------------------------------------------------
+vim server_health.sh
+#!/bin/bash
+
+echo "===== SERVER HEALTH REPORT ====="
+
+echo "Date: $(date)"
+echo "Hostname: $(hostname)"
+
+echo ""
+echo "===== UPTIME ====="
+uptime
+
+echo ""
+echo "===== CPU LOAD ====="
+top -bn1 | head -5
+
+echo ""
+echo "===== MEMORY USAGE ====="
+free -h
+
+echo ""
+echo "===== DISK USAGE ====="
+df -h
+
+echo ""
+echo "===== TOP 5 MEMORY PROCESSES ====="
+ps aux --sort=-%mem | head -6
+
+echo ""
+echo "===== SERVER HEALTH CHECK COMPLETED ====="
+
+2. Disk Space Alert Script
+-----------------------------------------------------------
+vim  disk_alert.sh
+
+#!/bin/bash
+
+THRESHOLD=80
+
+df -P | awk 'NR>1 {
+    usage=$5
+    gsub("%","",usage)
+
+    if (usage >= 80) {
+        print "WARNING: Disk usage is high!"
+        print "Filesystem:", $1
+        print "Usage:", $5
+    }
+}'
+
+
+3. Docker Container Monitoring
+***************************************************
+vim  docker_check.sh
+#!/bin/bash
+
+echo "===== DOCKER STATUS ====="
+
+if ! command -v docker >/dev/null 2>&1; then
+    echo "Docker is not installed"
+    exit 1
+fi
+
+if ! docker info >/dev/null 2>&1; then
+    echo "Docker service is not running or access denied"
+    exit 1
+fi
+
+echo "Running Containers:"
+docker ps
+
+echo ""
+echo "All Containers:"
+docker ps -a
+
+echo ""
+echo "Docker Images:"
+docker images
+
+echo ""
+echo "Docker Disk Usage:"
+docker system df
+
+4. Docker Cleanup Script
+*******************************************
+vim Docker_cleanup.sh
+
+#!/bin/bash
+
+echo "===== DOCKER CLEANUP ====="
+
+docker system df
+
+echo ""
+echo "Removing unused Docker resources..."
+
+docker system prune
+
+echo ""
+echo "Cleanup completed!"
+docker system df
+
+
+5. Backup Automation Script
+******************************************************
+vim backup.sh
+
+#!/bin/bash
+
+SOURCE="/var/www/html"
+DEST="/home/ubuntu/backups"
+
+DATE=$(date +%Y-%m-%d_%H-%M-%S)
+
+mkdir -p "$DEST"
+
+tar -czf "$DEST/backup_$DATE.tar.gz" "$SOURCE"
+
+if [ $? -eq 0 ]; then
+    echo "Backup successful!"
+    echo "Location: $DEST/backup_$DATE.tar.gz"
+else
+    echo "Backup failed!"
+    exit 1
+fi
+
+6. Linux Service Monitoring
+*********************************************************************
+vim service_check.sh
+
+#!/bin/bash
+
+SERVICES=("docker" "jenkins" "ssh" "nginx")
+
+for SERVICE in "${SERVICES[@]}"
+do
+    if systemctl is-active --quiet "$SERVICE"; then
+        echo "$SERVICE is RUNNING"
+    else
+        echo "$SERVICE is NOT RUNNING"
+    fi
+done
+
+7. Application Deployment Script
+****************************************************
+vim deploy.sh
+
+#!/bin/bash
+
+APP_DIR="/var/www/html"
+SOURCE_DIR="/tmp/myapp"
+
+echo "===== APPLICATION DEPLOYMENT ====="
+
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Application source directory not found!"
+    exit 1
+fi
+
+sudo mkdir -p "$APP_DIR"
+
+sudo cp -r "$SOURCE_DIR"/. "$APP_DIR"/
+
+if [ $? -eq 0 ]; then
+    echo "Deployment successful!"
+else
+    echo "Deployment failed!"
+    exit 1
+fi
+
+echo "Deployment completed at $(date)"
+
+8. Website URL Monitoring
+**********************************************************
+vim url_check.sh
+
+#!/bin/bash
+
+URL="https://www.google.com"
+
+HTTP_CODE=$(curl -L -s -o /dev/null -w "%{http_code}" "$URL")
+
+echo "Website: $URL"
+echo "HTTP Status: $HTTP_CODE"
+
+if [ "$HTTP_CODE" -eq 200 ]; then
+    echo "Website is UP"
+else
+    echo "WARNING: Website may be DOWN"
+fi
+
+9. Git Repository Automation
+*******************************************************************************
+vim git_status.sh
+
+#!/bin/bash
+
+REPO="/home/ubuntu/myproject"
+
+cd "$REPO" || exit 1
+
+echo "===== GIT STATUS ====="
+
+git status
+
+echo ""
+echo "===== CURRENT BRANCH ====="
+
+git branch --show-current
+
+echo ""
+echo "===== LATEST COMMIT ====="
+
+git log -1 --oneline
+
+10. Kubernetes Cluster Monitoring
+****************************************************************
+vim k8s_check.sh
+
+#!/bin/bash
+
+echo "===== KUBERNETES CLUSTER ====="
+
+if ! command -v kubectl >/dev/null 2>&1; then
+    echo "kubectl is not installed"
+    exit 1
+fi
+
+if ! kubectl cluster-info >/dev/null 2>&1; then
+    echo "Kubernetes cluster is not accessible"
+    exit 1
+fi
+
+echo ""
+echo "===== NODES ====="
+kubectl get nodes
+
+echo ""
+echo "===== PODS ====="
+kubectl get pods -A
+
+echo ""
+echo "===== DEPLOYMENTS ====="
+kubectl get deployments -A
+
+echo ""
+echo "===== SERVICES ====="
+kubectl get services -A
+
+
+
+
