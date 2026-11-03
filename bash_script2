@@ -497,3 +497,59 @@ if [[ $? -eq 0 ]]; then
 else
     echo "Internet connection failed"
 fi
+
+listenning port
+-----------------------
+nano port.sh
+#!/bin/bash
+PORT=8080
+if ss -lnt | grep -q ":$PORT "
+then
+    echo "Port $PORT is listening"
+else
+    echo "Port $PORT is not listening"
+fi
+
+checking the internet
+----------------------------------------
+nano internet.sh
+#!/bin/bash
+if ping -c 2 8.8.8.8 >/dev/null 2>&1
+then
+    echo "Internet is working"
+else
+    echo "Internet is not working"
+fi
+
+create a multiple user 
+***********************************
+nano user.sh
+!/bin/bash
+for user in dev1 dev2 dev3
+do
+    sudo useradd -m "$user"
+    echo "$user created"
+done
+
+check daily-log
+******************************************
+#!/bin/bash
+LOG_DIR="/tmp/devops-logs"
+mkdir -p "$LOG_DIR"
+echo "Script executed at $(date)" >> "$LOG_DIR/app.log"
+echo "Log updated"
+
+directory check 
+*********************************************
+nano dir.sh
+!/bin/bash
+du -sh /var/log
+
+check-cpu-consumming
+**************************************************
+nao cpu-consumming.sh
+#!/bin/bash
+ps aux --sort=-%cpu | head -6
+
+
+
