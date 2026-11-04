@@ -1,0 +1,215 @@
+1. Basic Linux commands
+  **************************************************
+  Command	      Purpose
+    pwd     	Show current directory
+    ls	      List files and folders
+   ls -l	    Detailed file information
+   ls -la	    Show hidden files
+   cd /tmp   	Change directory
+    cd ..	    Go to previous directory
+  mkdir devops	  Create directory
+ rmdir devops	   Delete empty directory
+  touch file.txt  	Create file
+   cp file1 file2	 Copy file
+  mv file1 file2	  Move or rename file
+  rm file.txt	      Delete file
+ find / -name file.txt	   Find file
+
+  2. File management commands
+  *****************************************************
+  Command         	Purpose
+cat file.txt	    Display file content
+less file.txt   	Read large files
+head file.txt	    Show first 10 lines
+tail file.txt	    Show last 10 lines
+tail -f app.log	  Monitor live logs
+grep "error" app.log	      Search errors
+grep -i "failed" app.log	   Search ignoring case
+wc -l file.txt	              Count lines
+sort file.txt                	Sort lines
+uniq file.txt	                    Remove adjacent duplicates
+cut -d: -f1 /etc/passwd	          Extract usernames
+
+ grep -i "error" /var/log/syslog   -> Check application errors
+ tail -f /var/log/syslog ->Monitor live logs
+
+ 3. User and group management
+  *************************************************
+Command	        Purpose
+whoami	      Current username
+who         	Logged-in users
+id	         User and group IDs
+sudo useradd raham	      Create user
+sudo passwd raham	          Set password
+sudo userdel raham	       Delete user
+sudo groupadd devops	      Create group
+sudo groupdel devops	      Delete group
+groups raham	             Show user groups
+sudo usermod -aG devops raham     	Add user to group
+
+Create a DevOps team group
+----------------------------
+sudo groupadd devops
+sudo useradd -m raham
+sudo usermod -aG devops raham
+
+4. Permissions management
+  *********************************
+Command                   	Purpose
+chmod 755 file.sh     	Change permissions
+chmod +x file.sh	      Make script executable
+chmod 644 file.txt     	Set file permissions
+chown raham file.txt	      Change owner
+chown -R raham:devops /app	   Change ownership recursively
+ls -l	                       Check permissions  
+
+5. Process management
+***********************
+Command	           Purpose
+ps aux	          Show running processes
+top	               Monitor CPU and memory
+htop	             Interactive process monitor
+pgrep nginx	         Find process ID
+kill PID	             Stop process
+kill -9 PID	         Force kill process
+uptime	               Show server uptime
+free -h	               Check RAM
+nproc               	Number of CPU cores
+lscpu	                 CPU information  
+
+ps aux | grep nginx
+
+6. Disk and storage management
+***********************************
+Command                 purpose  
+ df -h           Check disk space 
+du -sh /var/log    Check directory size |
+lsblk             List disks 
+ blkid           Show disk UUID 
+ mount          Show mounted filesystems 
+ free -h          Check memory 
+ du -ah /var | sort -rh | head =   Find large files 
+ df -h  = checking disk storage 
+ sudo du -sh /var/lib/docker -> Find large Docker storage
+
+
+7. Networking commands
+*****************************************************
+Command           	Purpose
+ip a          	Show IP addresses
+ip route	        Show routing table
+ping google.com	      Check connectivity
+curl https://google.com	        Test HTTP connectivity
+wget URL	                         Download files
+ss -tulnp	                       Show listening ports
+netstat -tulnp	                 Show network connections
+nslookup google.com           	DNS lookup
+dig google.com	                DNS information
+traceroute google.com	           Trace network route
+hostname	                      Show hostname
+
+sudo ss -tulnp | grep 8080 -> Check whether Jenkins is running on port 8080
+curl -I http://localhost:8080 -> Check whether the website is responding
+
+8. Package management commands
+************************************
+Command	            Purpose
+sudo apt update	             Update package list
+sudo apt upgrade	          Upgrade packages
+sudo apt install nginx	      Install Nginx
+sudo apt remove nginx          	Remove Nginx
+sudo apt purge nginx         	Remove package and its configuration
+sudo apt autoremove        	Remove unused dependencies
+apt list --installed	          List installed packages 
+
+9. Service management (systemctl)
+  *********************************************************
+Command                         	Purpose
+systemctl status nginx	         Check service
+sudo systemctl start nginx	     Start service
+sudo systemctl stop nginx	          Stop service
+sudo systemctl restart nginx	         Restart service
+sudo systemctl enable nginx	           Start on boot
+sudo systemctl disable nginx	         Disable startup
+sudo systemctl reload nginx	         Reload configuration 
+
+sudo systemctl status jenkins
+sudo systemctl restart jenkins  
+
+10. Log management
+****************************************************************
+Command	                      Purpose
+journalctl	                  View system logs
+journalctl -xe          	View recent system errors
+journalctl -u nginx	          Nginx logs
+journalctl -u jenkins      	Jenkins logs
+journalctl -u docker -f	      Monitor Docker logs
+dmesg	Kernel messages
+tail -f /var/log/syslog	Monitor system log  
+
+11. SSH and remote server commands
+***************************************************
+Command	                              Purpose
+ssh user@IP	                      Connect to remote server
+scp file.txt user@IP:/tmp/          	Copy file to server
+scp user@IP:/tmp/file.txt .          	Download file12. 
+ssh-keygen	                          Generate SSH key
+ssh-copy-id user@IP	                 Copy public key
+chmod 400 key.pem	                  Secure private key  
+
+ssh -i mykey.pem ubuntu@192.168.1.10  -> EXAMPLE 
+
+Bash scripting commands
+**********************************************
+Command	                Purpose
+echo "Hello"	      Print output
+read name	          Take input
+if	           Conditional execution
+for	             Loop
+while           	Repeated execution
+case	         Multiple conditions
+date	           Current date
+sleep 5	Wait 5 seconds
+crontab -e          	Schedule jobs
+bash script.sh	       Execute script
+
+bash scripting
+****************************************************  
+
+#!/bin/bash
+
+echo "===== SERVER HEALTH CHECK ====="
+
+echo "Hostname:"
+hostname
+
+echo "CPU Information:"
+nproc
+
+echo "Memory Usage:"
+free -h
+
+echo "Disk Usage:"
+df -h
+
+echo "Server Uptime:"
+uptime
+
+echo "===== CHECK COMPLETED ====="  
+
+13. Most important commands for DevOps tools
+  ********************************************************
+  Technology	           Commands to practise
+Git	            git status, git add, git commit, git push, git pull, git log
+Docker	        docker ps, docker images, docker logs, docker exec, docker build, docker push
+Kubernetes     	kubectl get pods, kubectl get nodes, kubectl describe, kubectl logs, kubectl apply, kubectl delete
+Jenkins	systemctl status       jenkins, journalctl -u jenkins
+Ansible	ansible all -m ping, ansible-playbook
+Terraform	terraform init, terraform plan, terraform apply, terraform destroy
+AWS CLI	aws ec2 describe-instances, aws s3 ls
+  
+
+  
+  
+
+  
