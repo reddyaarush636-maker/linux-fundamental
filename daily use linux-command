@@ -204,10 +204,46 @@ Git	            git status, git add, git commit, git push, git pull, git log
 Docker	        docker ps, docker images, docker logs, docker exec, docker build, docker push
 Kubernetes     	kubectl get pods, kubectl get nodes, kubectl describe, kubectl logs, kubectl apply, kubectl delete
 Jenkins	systemctl status       jenkins, journalctl -u jenkins
-Ansible	ansible all -m ping, ansible-playbook
-Terraform	terraform init, terraform plan, terraform apply, terraform destroy
+Ansible	       ansible all -m ping, ansible-playbook
+Terraform	    terraform init, terraform plan, terraform apply, terraform destroy
 AWS CLI	aws ec2 describe-instances, aws s3 ls
-  
+
+14. Your 7-day Linux practice plan
+**************************************
+Day 1 – Basic commands and directory management
+
+pwd, ls, cd, mkdir, touch, cp, mv, rm
+
+[ ] Day 2 – File management and searching
+
+cat, grep, find, cut, sort, uniq, tail
+
+[ ] Day 3 – Users, groups and permissions
+
+useradd, groupadd, usermod, chmod, chown
+
+[ ] Day 4 – Process, disk and memory management
+
+ps, top, free, df, du, kill
+
+[ ] Day 5 – Networking and SSH
+
+ip, ping, curl, ss, dig, ssh, scp
+
+[ ] Day 6 – Services and log troubleshooting
+
+systemctl, journalctl, apt
+
+[ ] Day 7 – Bash scripting and automation
+
+if, for, while, functions, crontab
+
+
+My recommendation
+**************************
+For a fresher DevOps Engineer, focus especially on these 20 commands first
+
+ls, cd, pwd, mkdir, cp, mv, rm, cat, grep, find, chmod, chown, ps, top, df, du, ip, ss, curl, systemctl
 
   
   
