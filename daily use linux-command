@@ -91,6 +91,14 @@ lsblk             List disks
  du -ah /var | sort -rh | head =   Find large files 
  df -h  = checking disk storage 
  sudo du -sh /var/lib/docker -> Find large Docker storage
+df -h /   = check only main ubuntu storage 
+df -i = check inode uses  
+df -hT  = check file system 
+ls -i  = show inode no
+ls -li = del inode info
+df -h /   = check only main ubuntu storage 
+free -h  = show free ram storage 
+du -sh * = check file consume storage 
 
 
 7. Networking commands
