@@ -411,14 +411,129 @@ Level 4 — Advanced Git
 - Protect branches and secure secrets
 
 🟢 Phase 4 — Bash + Python ⭐⭐⭐⭐ {2-3 weeks}
-variables
-if
-else
-for
-while
-functions
-arguments
-exit codes
+variables - Variables store information such as server names, IP addresses, ports, and application status.
+**********
+nano variable.py
+ server_name = "web-server"
+server_ip = "192.168.1.10"
+port = 80
+status = "running"
+
+print(server_name)
+print(server_ip)
+print(port)
+print(status)
+
+chmod 755 variable.sh
+python3 variable.sh
+ 
+if   =
+else = Used to make decisions based on conditions.
+***************
+ nano if_else.py
+  disk_usage = 85
+
+if disk_usage >= 80:
+    print("WARNING: Disk usage is high")
+
+else:
+    print("Disk usage is normal")
+
+python3 if_else.py
+
+for  / for loop = Used to repeat tasks multiple times
+***********************************
+nano for_loop.py
+ servers = ["web1", "web2", "web3", "db1"]
+
+for server in servers:
+    print("Checking server:", server)
+
+
+while | while loop = Repeats a task while a condition remains true.
+******************************
+nano while_loop.py
+attempt = 1
+
+while attempt <= 5:
+    print("Checking application:", attempt)
+    attempt += 1
+
+functions = Functions allow you to write reusable code. You can call the same function whenever required.
+*************************************
+nano function.py
+def check_server():
+    print("Checking server status")
+    print("Server is running")
+
+check_server()
+
+
+arguments = Arguments allow you to pass information to a Python script when running it.
+********************
+nano argument.py
+import sys
+
+server_name = sys.argv[1]
+
+print("Checking server:", server_name)
+
+
+exit codes = Exit codes tell Linux, Jenkins, or another automation tool whether a script succeeded or failed.
+     . 0 = success
+     . 1 = Failure
+
+nano exit_code.py
+import sys
+
+service = "running"
+
+if service == "running":
+    print("Application is healthy")
+    sys.exit(0)
+
+else:
+    print("Application failed")
+    sys.exit(1)
+
+
+7 concept 
+-------------------
+nano devops.py
+ import sys
+
+# 1. Variables
+servers = ["web1", "web2", "db1"]
+
+# 2. Function
+def check_server(server):
+
+    # 3. if / else
+    if server == "db1":
+        print(server, "Database server checked")
+    else:
+        print(server, "Web server checked")
+
+# 4. for loop
+for server in servers:
+    check_server(server)
+
+# 5. while loop
+count = 1
+
+while count <= 2:
+    print("Monitoring application:", count)
+    count += 1
+
+# 6. Arguments
+print("Script execution completed")
+
+# 7. Exit code
+sys.exit(0)
+
+chmod 755 devops.py
+python devops.py
+
 
 python
 --------------
